@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title>济南大学信息学院--学生信息查询</title>
+		<meta name="viewport" content="width=device-width,initial-scale=1.0,user-scalable=no"
+		<link rel="stylesheet" href="css/bootstrap-theme.min.css" />
+		<link rel="stylesheet" href="css/bootstrap.min.css" />
+		<link rel="stylesheet" href="css/style.css" />
+		<!--
+        	Nothing but you.
+        -->
+	</head>
+	<body>
+		<div class="navbar navbar-default navbar-fixed-top">
+			<div class="container">
+				<div class="navbar-brand ssbrand" style="position:relative">
+						济南大学信息科学与工程学院
+				</div>
+				<div class="navbar-header">
+				 </div>
+			</div>
+		</div>
+		<div class="container">
+			<h1 style="text-align: center;">学生成绩查询</h1>
+			<!--
+            	作者：hafrans@163.com
+            	时间：2016-11-24
+            -->
+			<div class="row" id="form-ajax" >
+				<div id="request" class="col-lg-6 col-lg-offset-3 col-sm-12">
+					<div class="myform">
+						<form class="form-horizontal" id="pform" onsubmit="return false;">
+						<div class="form-group">
+							<label class="control-label" for="name">姓名</label>
+							<input autocomplete="on" id="name" class="form-control" name="name" placeholder="请输入姓名" />
+						</div>
+						<div class="form-group">
+							<label class="control-label" for="major">专业</label>
+							<select name="major" class="form-control">
+								<option value="1">计类</option>
+								<option value="2">计软</option>
+								<option value="3">电子</option>
+							</select>
+						</div>
+						<div class="form-group">
+							<label class="control-label" for="stunum">学号</label>
+							<input autocomplete="on" id="stunum" class="form-control" name="stu_num" placeholder="请输入学号" />
+						</div>
+						<div class="form-group" style="text-align:right;margin-top:2rem">
+							<input class="btn btn-primary" id="submit" type="button" name="submit" value="查询" />
+						</div>
+						</form>
+
+					</div>
+					<div class="hafrans-cover" id="cover">
+							<img id="status" src="img/status.gif" alt="Loading..."/>
+							<p id="message" style="display: none;">查询中</p>
+					</div>
+				</div>
+				<div id="result" class="col-lg-6 col-lg-offset-3 col-sm-12">
+						<div class="myform">
+							<table class="table-bordered table table-hover">
+								<tr>
+									<th style="width:20%">
+										姓名
+									</th>
+									<td id="name">
+										[SOIL]
+									</td>
+								</tr>
+								<tr>
+									<th style="width:20%">
+										专业类别
+									</th>
+									<td id="major">
+										[SOIL]
+									</td>
+								</tr>
+								<tr>
+									<th style="width:20%">
+										学号
+									</th>
+									<td id="stu_num">
+										[ACM]
+									</td>
+								</tr>
+								<tr>
+									<th style="width:20%">
+										数学
+									</th>
+									<td id="math">
+										[ACM]
+									</td>
+								</tr>
+								<tr>
+									<th style="width:20%">
+										数学排名
+									</th>
+									<td id="math_level">
+										[ACM]
+									</td>
+								</tr>
+								<tr>
+									<th style="width:20%">
+										英语
+									</th>
+									<td id="english">
+										[ACM]
+									</td>
+								</tr>
+								<tr>
+									<th style="width:20%">
+										英语排名
+									</th>
+									<td id="english_level">
+										[ACM]
+									</td>
+								</tr>
+								<tr>
+									<th style="width:20%">
+										总分
+									</th>
+									<td id="total">
+										[ACM]
+									</td>
+								</tr>
+								<tr>
+									<th style="width:20%">
+										专业排名
+									</th>
+									<td id="level">
+										[ACM]
+									</td>
+								</tr>
+							</table>
+							<div class="panel panel-default">
+								<div class="panel-heading">
+									<div class="panel-title">
+										本专业统计
+									</div>
+								</div>
+								<div class="panel-body">
+									<div class="stat">
+										<p>数学挂科率情况</p>
+										<div id="math_stat" style="width:100%;background-color:rgb(179,235,135)" class="bg-danger">
+											<div id="m" style="color:#eff;padding:.5em;width:0%;background-color:rgb(254,67,101)" class="bg-success">
+												56%
+											</div>
+										</div>
+									</div>
+									<div class="stat">
+										<p>英语挂科率情况</p>
+										<div id="math_stat" style="width:100%;background-color:rgb(179,235,135)" class="bg-danger">
+											<div id="e" style="color:#eff;padding:.5em;width:0%;background-color:rgb(254,67,101)" class="bg-success">
+												56%
+											</div>
+										</div>
+									</div>
+									<div class="stat">
+										<p>总挂科率情况</p>
+										<div id="math_stat" style="width:100%;background-color:rgb(179,235,135)" class="bg-danger">
+											<div id="t" style="color:#eff;padding:.5em;width:0%;background-color:rgb(254,67,101)" class="bg-success">
+												56%
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="panel panel-default">
+							<div class="panel-heading">
+								<div class="panel-title">提示</div>
+							</div>
+							<div class="panel-body">
+								<p>1.若对此数据有异议请联系学习部相关工作人员</p>
+								<p>2.若考生未考、交白卷、缺卷、数据丢失等情况将记零分</p>
+							</div>
+						</div>
+						</div>
+						
+				</div>
+			</div>
+		</div>
+		
+
+
+		<!-- Javascript Here. -->
+		<!--<script src="//libs.baidu.com/jquery/2.0.0/jquery.min.js"></script>-->
+		<script type="text/javascript" src="js/jquery-2.1.0.js" ></script>
+		<script type="text/javascript" src="js/bootstrap.min.js" ></script>
+		<script type="text/javascript" src="js/script.js" ></script>
+		<!--<script type="text/javascript" src="js/npm.js" ></script>-->
+		<div class="footer">
+			<div class="power">
+			<p>济南大学图灵电脑协会</p>
+			<p>济南大学软件外包创新实验室</p>
+			<p>powered by <a href="//ibytes.cn">Hafrans</a></p>
+			<script type="text/javascript">var cnzz_protocol = (("https:" == document.location.protocol) ? " https://" : " http://");document.write(unescape("%3Cspan id='cnzz_stat_icon_1259297981'%3E%3C/span%3E%3Cscript src='" + cnzz_protocol + "s4.cnzz.com/stat.php%3Fid%3D1259297981%26show%3Dpic1' type='text/javascript'%3E%3C/script%3E"));</script>
+			</div>
+		</div>
+	</body>
+</html>

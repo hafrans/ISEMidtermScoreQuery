@@ -1,0 +1,172 @@
+/**
+ * Style Sheet
+ * (c)2016 SOIL ALL RIGHTS RESERVED
+ * hafrans@163.com
+ */
+
+body{
+	transition:padding-top 0.6;	
+	min-height: 90%;
+	background: #f3f3f3;
+	padding-top: 13%;
+	font-family: "microsoft yahei";
+}
+.hafrans-navbar{
+	position: fixed;
+}
+.myform{
+	width:100%;
+	position: relative;
+	min-height: 20rem; 
+	padding:1rem;
+	border:1px #ABABAB solid;
+	border-radius: 8px;
+	box-shadow: 1px 1px 2px #aaa inset;
+}
+.myform > form {
+	padding: 2rem;
+}
+#result{
+	display: none;
+}
+.hide{
+	display: none;
+}
+#form-ajax{
+}
+.hafrans-cover{
+	width:95%;
+	border-radius: 8px;
+	min-height: 36rem;
+	position: absolute;
+	z-index: 99;
+	background: rgba(255,255,255,0.9);
+	top:0;
+	display: none;
+}
+.hafrans-cover > img{
+	position: absolute;
+	color:darkred;
+	text-align: left;
+	font-size: x-large;
+	top: 50%;
+	left:50%;
+	margin: -32px 0 0 -32px;
+}
+.hafrans-cover > p{
+	width: 250px;
+	height: 30px;
+	position: absolute;
+	color:darkred;
+	text-align: center;
+	font-size: x-large;
+	top: 50%;
+	left:50%;
+	margin: -15px 0 0 -125px;
+}
+@media screen and (max-width:1200px ) {
+	.ssbrand{
+		width:100% !important;
+		text-align:center;
+	}
+	.hafrans-cover{
+		width:97%;
+		border-radius: 8px;
+		min-height: 36rem;
+		position: absolute;
+		z-index: 99;
+		background: rgba(255,255,255,0.9);
+		top:0;
+		display: none;
+	}
+	
+}
+
+@media screen and (max-width:990px ) {
+	.hafrans-cover{
+		width:96%;
+		border-radius: 8px;
+		min-height: 36rem;
+		position: absolute;
+		z-index: 99;
+		background: rgba(255,255,255,0.9);
+		top:0;
+		display: none;
+	}
+}
+
+@media screen and (min-width:1200px ) {
+	body{
+		padding-top:9%;
+	}
+	.footer{
+		margin-top:22%;
+	}
+}
+
+@media screen and (max-width:600px ) {
+	.hafrans-cover{
+		width:95%;
+		border-radius: 8px;
+		min-height: 36rem;
+		position: absolute;
+		z-index: 99;
+		background: rgba(255,255,255,0.9);
+		top:0;
+		display: none;
+	}
+}
+/**
+ * AUTORESIZE
+ */
+
+@media screen and (max-width: 948px) {
+	h1{
+		font-size: 2.0rem;
+	}
+	
+}
+
+.stat{
+	margin:.9em 0;
+}
+
+
+#chart-1{
+	background: rgb(0,200,200);
+}
+.footer_top{
+	margin:auto;
+	text-align:center;
+}
+.footer_top p{
+	margin-bottom:5px;
+    padding-top: 5px;
+}
+.power{
+	margin: auto;
+    text-align: center;
+}
+
+.power p{
+	margin-bottom:0px;
+}
+.btn-primary{
+	width: 100%;
+    margin: auto;
+    margin-top: 10px;
+    text-align: center;
+}
+
+.footer{
+	margin-top:13%;
+	width:100%;
+	height:auto;
+	position:relative;
+    bottom:0;
+	color:#5e5e5e;
+    left:0;
+	background-color: white;
+	border-top:1px  solid #788ca0;
+    border-color: #e7e7e7;
+}
