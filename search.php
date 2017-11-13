@@ -84,7 +84,7 @@
 					$body['t'] = "45%";
 					break;
 			}
-			$body['major'] = ($body['major'] < 3)?($body['major'] == 1?"计类":"计软"):"电子";
+			$body['major'] = ($body['major'] < 3)?($body['major'] == 1?"计类":"计数"):"电子";
             exit(json_encode($body));
         }
     }else{
