@@ -13,7 +13,7 @@
 	
     $dbstring = "mysql:host=127.0.0.1;dbname=test";
     $username = "root";
-    $passwd = "zh677298";
+    $passwd = "root";
     $column_name = "score";
 	
     $msg = array();
